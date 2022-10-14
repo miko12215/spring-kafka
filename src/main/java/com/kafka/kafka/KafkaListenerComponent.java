@@ -13,7 +13,7 @@ public class KafkaListenerComponent {
 
     @KafkaListener(topics = "testTopic",
                    groupId = "second",
-                   containerFactory = "factory ")
+                   containerFactory = "userFactory")
     void listener(User user) {
         System.out.println(user.getAge() + user.getFirstname());
 
